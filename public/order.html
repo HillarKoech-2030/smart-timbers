@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Timbers - Order Page</title>
+  <style>
+    body {
+      background-image: url('https://wallpaperaccess.com/full/369057.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 100px;
+      font-size: 48px;
+      font-style: italic;
+      color: #00bfff;
+    }
+
+    .button {
+      background-color: #228B22;
+      border: none;
+      color: rgb(248, 247, 247);
+      padding: 15px 30px;
+      margin: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .button:hover {
+      background-color: #006400;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Smart Timbers</h1>
+
+  <!-- Follow-Up Section -->
+  <section id="followupSection" style="margin-top:50px;">
+    <h2 style="color:#00bfff;">Smart Timber - Best of Wood Products</h2>
+    <img src="logo.png" alt="Smart Timber Logo" style="width:100px; margin:10px 0;" />
+    <p style="font-size:1.2em;">Get the finest wood products around you.</p>
+    <button class="button" onclick="showOrderForm()">Order Now</button>
+  </section>
+
+  <!-- Order Form (Visible by default) -->
+  <form id="orderForm" style="max-width:400px; margin:20px auto; text-align:left;">
+    <input type="text" id="location" placeholder="Location" required />
+    <input type="text" id="town" placeholder="Town" required />
+    <input type="text" id="material" placeholder="Material" required />
+    <input type="text" id="type" placeholder="Type" required />
+    <input type="number" id="quantity" placeholder="Quantity" required />
+    <input type="text" id="additional" placeholder="Additional Product (e.g., Paint)" required />
+    <button type="button" class="button" onclick="validateAndSearch()">Search</button>
+    <p id="formError" style="color:red;"></p>
+  </form>
+<script src="order.js"></script>
+  </body>
+</html>
+
+
